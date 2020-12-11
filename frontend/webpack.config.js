@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const config = {
   entry: {
@@ -71,6 +72,14 @@ const config = {
     }),
     new MiniCssExtractPlugin({
       filename: '[contenthash].css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'platforms/android/app/build/outputs/apk/debug/app-debug.apk',
+          to: '../../applications/Submarine.[ext]',
+        },
+      ],
     }),
     new WebpackManifestPlugin(),
   ],
