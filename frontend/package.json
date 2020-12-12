@@ -10,7 +10,7 @@
     "dev:src": "webpack -w --config webpack.config.js --mode development",
     "build:src": "webpack --config webpack.config.js --mode production",
     "build:apk": "cordova build",
-    "watch:apk": "nodemon --watch dist --exec 'cordova emulate android'",
+    "watch:apk": "nodemon --ext js,css,html --watch www --exec 'cordova emulate android'",
     "apk": "cordova emulate android"
   },
   "keywords": [
