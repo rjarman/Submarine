@@ -1,0 +1,84 @@
+@import '../variables.scss';
+
+.about-container {
+  display: none;
+  width: 280px;
+  height: 325px;
+  border-radius: 5px;
+  background-color: $popover-background-color;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.about-container--active {
+  display: flex;
+}
+
+.about-logo__container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.about-logo {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets/img/logo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-heading {
+  font-family: $submarine-article;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.about-caption {
+  font-family: $submarine-article;
+}
+
+.about-version {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.about-container > .hr-item {
+  border-top: 1px solid $about-social__heading;
+  margin: 10px 0;
+}
+
+.about-description {
+  text-align: center;
+  font-size: 0.875rem;
+  font-family: $submarine-article;
+  font-weight: 600;
+  color: $about-description;
+  margin-bottom: 14px;
+}
+
+.about-social__heading {
+  font-family: $submarine-caption;
+  font-size: 0.75rem;
+  letter-spacing: 0.4px;
+  color: $about-social__heading;
+  margin: 12px 0;
+}
+
+.about-social__links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}

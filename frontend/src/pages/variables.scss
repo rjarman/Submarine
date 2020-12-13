@@ -1,0 +1,25 @@
+$submarine-heading: 'submarine-heading', 'DejaVu Sans', sans;
+$submarine-caption: 'submarine-caption', 'DejaVu Sans', serif;
+$submarine-article: 'submarine-article', 'DejaVu Sans', sans;
+
+$submarine-heading-bn: 'submarine-heading-bn', 'DejaVu Sans', sans;
+$submarine-caption-bn: 'submarine-caption-bn', 'DejaVu Sans', serif;
+$submarine-article-bn: 'submarine-article-bn', 'DejaVu Sans', sans;
+
+$icons-color: #626262;
+$icons-color-tap: #488454;
+$section-separator-color: #e5e5e5;
+$direction-btn-background: whitesmoke;
+$backdrop-color: rgba(0, 0, 0, 0.5);
+$backdrop-background-color: rgb(255, 255, 255, 0.5);
+$button-color: #0000008a;
+$button-color-click: #000000d6;
+$popover-background-color: white;
+$about-description: #737373;
+$about-social__heading: #b0b3b5;
+
+$common-font-size: 0.9375rem;
+
+@mixin btn-shadow-fn {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}

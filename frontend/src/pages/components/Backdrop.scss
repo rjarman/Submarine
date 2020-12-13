@@ -1,0 +1,14 @@
+@import '../variables.scss';
+
+.backdrop {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: $backdrop-color;
+  z-index: 50;
+}
+
+.backdrop--active {
+  display: block;
+}

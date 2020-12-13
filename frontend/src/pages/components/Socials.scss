@@ -1,0 +1,70 @@
+@import '../variables.scss';
+
+.social-btn {
+  position: relative;
+}
+
+.social-btn .social-options,
+.social-btn .social-options,
+.social-btn .social-options {
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+
+.social-options {
+  display: none;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.social-options > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-options > .hr-item {
+  align-self: center;
+  width: 90% !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  margin: 0 !important;
+}
+
+.social-options--clicked {
+  display: flex;
+}
+
+.hr-item--clicked {
+  opacity: 0 !important;
+}
+
+.social--clicked {
+  background-color: rgba(0, 0, 0, 0.14);
+}
+
+@media (min-width: 40rem) {
+  .social-btn:hover,
+  .social-btn:focus,
+  .social-btn:active {
+    .social-options {
+      display: flex;
+    }
+  }
+
+  .social-options:hover,
+  .social-options:active,
+  .social-options:focus {
+    .hr-item {
+      opacity: 0;
+    }
+  }
+
+  .social-options > a:hover,
+  .social-options > a:active,
+  .social-options > a:focus {
+    background-color: rgba(0, 0, 0, 0.14);
+  }
+}

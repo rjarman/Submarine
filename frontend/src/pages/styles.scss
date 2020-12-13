@@ -1,0 +1,94 @@
+@import './fonts.scss';
+@import './variables.scss';
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-user-select: none;
+  font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI',
+    'Roboto', sans-serif;
+  font-size: 12px;
+  height: 100vh;
+  padding: 0px;
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  width: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dd,
+ol,
+ul,
+menu,
+figure,
+blockquote,
+p,
+pre,
+form {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.container-body {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.btn {
+  border-width: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-grp {
+  padding: 0;
+  list-style: none;
+}
+
+.container-body__btn {
+  @include btn-shadow-fn;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 100px;
+  right: 25px;
+  padding: 0;
+  align-self: flex-end;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.hr-item {
+  margin-bottom: 15px;
+  width: 100%;
+  border-color: rgba(255, 255, 255, 0.98);
+  border-style: solid;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+}

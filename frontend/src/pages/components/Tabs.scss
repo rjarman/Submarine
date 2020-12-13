@@ -1,0 +1,53 @@
+@import '../variables.scss';
+
+.container-tabs {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  padding: 10px 0;
+  justify-content: center;
+  font-weight: 550;
+  font-size: 12.5px;
+  color: $icons-color;
+  border-top: 1px solid $section-separator-color;
+}
+
+.container-tabs__btn {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.container-tabs__btn > p {
+  margin-top: 5px;
+}
+
+.container-tabs__btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.container-tabs__btn svg path {
+  fill: $icons-color;
+}
+
+.container-tabs__btn:active,
+.container-tabs__btn:focus,
+.container-tabs__btn:hover {
+  color: $icons-color-tap;
+  svg path {
+    fill: $icons-color-tap;
+  }
+}
+
+.container-tabs__btn--active {
+  color: $icons-color-tap;
+}
+
+.container-tabs__btn__svg--active {
+  fill: $icons-color-tap !important;
+}
