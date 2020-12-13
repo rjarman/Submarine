@@ -1,0 +1,124 @@
+// english fonts
+
+// submarine-heading fonts
+@font-face {
+  font-family: 'submarine-heading';
+  src: url('../assets/fonts/en/Merriweather-Regular.woff2') format('woff2'),
+    url('../assets/fonts/en/Merriweather-Regular.woff') format('woff'),
+    url('../assets/fonts/en/Merriweather-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'submarine-heading';
+  src: url('../assets/fonts/en/Merriweather-Bold.woff2') format('woff2'),
+    url('../assets/fonts/en/Merriweather-Bold.woff') format('woff'),
+    url('../assets/fonts/en/Merriweather-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'submarine-heading';
+  src: url('../assets/fonts/en/Merriweather-BoldItalic.woff2') format('woff2'),
+    url('../assets/fonts/en/Merriweather-BoldItalic.woff') format('woff'),
+    url('../assets/fonts/en/Merriweather-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+// submarine-caption fonts
+@font-face {
+  font-family: 'submarine-caption';
+  src: url('../assets/fonts/en/HelveticaNeueRegular.woff2') format('woff2'),
+    url('../assets/fonts/en/HelveticaNeueRegular.woff') format('woff'),
+    url('../assets/fonts/en/HelveticaNeueRegular.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'submarine-caption';
+  src: url('../assets/fonts/en/HelveticaNeueThin.woff2') format('woff2'),
+    url('../assets/fonts/en/HelveticaNeueThin.woff') format('woff'),
+    url('../assets/fonts/en/HelveticaNeueThin.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'submarine-caption';
+  src: url('../assets/fonts/en/HelveticaNeueLight.woff2') format('woff2'),
+    url('../assets/fonts/en/HelveticaNeueLight.woff') format('woff'),
+    url('../assets/fonts/en/HelveticaNeueLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+// submarine-article fonts
+@font-face {
+  font-family: 'submarine-article';
+  src: url('../assets/fonts/en/Charter-Italic.woff2') format('woff2'),
+    url('../assets/fonts/en/Charter-Italic.woff') format('woff'),
+    url('../assets/fonts/en/Charter-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'submarine-article';
+  src: url('../assets/fonts/en/Charter-Bold.woff2') format('woff2'),
+    url('../assets/fonts/en/Charter-Bold.woff') format('woff'),
+    url('../assets/fonts/en/Charter-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'submarine-article';
+  src: url('../assets/fonts/en/Charter-BoldItalic.woff2') format('woff2'),
+    url('../assets/fonts/en/Charter-BoldItalic.woff') format('woff'),
+    url('../assets/fonts/en/Charter-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'submarine-article';
+  src: url('../assets/fonts/en/Charter.woff2') format('woff2'),
+    url('../assets/fonts/en/Charter.woff') format('woff'),
+    url('../assets/fonts/en/Charter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// bangla fonts
+
+// submarine-heading-bn fonts
+@font-face {
+  font-family: 'submarine-heading-bn';
+  src: url('../assets/fonts/bn/ShorifShishirANSIV2.woff2') format('woff2'),
+    url('../assets/fonts/bn/ShorifShishirANSIV2.woff') format('woff'),
+    url('../assets/fonts/bn/ShorifShishirANSIV2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// submarine-caption-bn fonts
+@font-face {
+  font-family: 'submarine-caption-bn';
+  src: url('../assets/fonts/bn/LiShamimChitraneeANSIV2.woff2') format('woff2'),
+    url('../assets/fonts/bn/LiShamimChitraneeANSIV2.woff') format('woff'),
+    url('../assets/fonts/bn/LiShamimChitraneeANSIV2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// submarine-article-bn fonts
+@font-face {
+  font-family: 'submarine-article-bn';
+  src: url('../assets/fonts/bn/ShorifMitali.woff2') format('woff2'),
+    url('../assets/fonts/bn/ShorifMitali.woff') format('woff'),
+    url('../assets/fonts/bn/ShorifMitali.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
