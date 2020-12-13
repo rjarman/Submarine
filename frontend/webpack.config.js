@@ -8,10 +8,10 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 const config = {
   entry: {
-    index: './src/index.tsx',
+    index: './src/pages/Index.tsx',
   },
   output: {
-    filename: '[name].[contenthash].bundle.js',
+    filename: '[contenthash].bundle.js',
     path: path.resolve(__dirname, 'www'),
     publicPath: '',
   },
@@ -50,7 +50,7 @@ const config = {
             loader: 'file-loader',
             options: {
               name: '[contenthash].[ext]',
-              outputPath: '',
+              outputPath: 'assets',
             },
           },
         ],
