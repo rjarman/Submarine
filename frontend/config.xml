@@ -17,6 +17,11 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <icon src="src/assets/icons/mipmap-hdpi/submarine_round.png" density="hdpi" />
+        <icon src="src/assets/icons/mipmap-mdpi/submarine_round.png" density="mdpi" />
+        <icon src="src/assets/icons/mipmap-xhdpi/submarine_round.png" density="xhdpi" />
+        <icon src="src/assets/icons/mipmap-xxhdpi/submarine_round.png" density="xxhdpi" />
+        <icon src="src/assets/icons/mipmap-xxxhdpi/submarine_round.png" density="xxxhdpi" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
