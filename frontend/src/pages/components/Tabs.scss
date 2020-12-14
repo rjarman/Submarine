@@ -12,6 +12,8 @@
   font-size: 12.5px;
   color: $icons-color;
   border-top: 1px solid $section-separator-color;
+  z-index: 20;
+  background-color: $container-tab-bg-color;
 }
 
 .container-tabs__btn {

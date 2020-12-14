@@ -1,0 +1,180 @@
+@import '../../variables.scss';
+
+.fab-container {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  bottom: 90px;
+}
+
+.fab-checkbox {
+  display: none;
+}
+
+.fab-btn {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: #126ee2;
+  box-shadow: 0px 5px 20px #81a4f1;
+  transition: all 0.3s ease;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.fab-btn:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.fab-checkbox:checked ~ .fab-btn:before {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.fab-btn:hover {
+  background: #2c87e8;
+  box-shadow: 0px 5px 20px 5px #81a4f1;
+}
+
+.fab-btn__dots {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateX(0%) translateY(-50%) rotate(0deg);
+  opacity: 1;
+  animation: blink 3s ease infinite;
+  transition: all 0.3s ease;
+}
+
+.fab-btn__dot-1 {
+  left: 15px;
+  animation-delay: 0s;
+}
+
+.fab-btn__dot-2 {
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  animation-delay: 0.4s;
+}
+
+.fab-btn__dot-3 {
+  right: 15px;
+  animation-delay: 0.8s;
+}
+
+.fab-checkbox:checked ~ .fab-btn .fab-btn__dots {
+  height: 6px;
+}
+
+.fab-btn .fab-btn__dot-2 {
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+}
+
+.fab-checkbox:checked ~ .fab-btn .fab-btn__dot-1 {
+  width: 32px;
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.fab-checkbox:checked ~ .fab-btn .fab-btn__dot-3 {
+  width: 32px;
+  border-radius: 10px;
+  right: 50%;
+  transform: translateX(50%) translateY(-50%) rotate(-45deg);
+}
+
+.fab-checkbox:checked ~ .fab-btn .fab-btn__dots {
+  animation: none;
+}
+
+.fab-btn__options {
+  position: absolute;
+  border: 1px solid transparent;
+  width: 13rem;
+  height: 13rem;
+  transition: all 0.3s ease;
+  transform-origin: bottom center;
+  transform: scale(0);
+  bottom: 32px;
+}
+
+.fab-checkbox:checked ~ .fab-btn__options {
+  transform: scale(1);
+}
+
+.fab-btn__option {
+  position: absolute;
+  background: #0f1941;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: White;
+  box-shadow: 0 0.1rem 1rem rgba(24, 66, 154, 0.82);
+  transition: all 1s ease;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.fab-checkbox:checked ~ .fab-btn__options .fab-btn__option {
+  opacity: 0.3;
+}
+
+#controlRight:hover,
+#controlRight:active,
+#controlRight:focus,
+#controlLeft:hover,
+#controlLeft:active,
+#controlLeft:focus {
+  background-color: $icons-color-tap;
+}
+
+.fab-btn__options .fab-btn__option-1 {
+  right: -2rem;
+  bottom: -1.5rem;
+}
+
+.fab-btn__options .fab-btn__option-2 {
+  right: 0.5rem;
+  bottom: 3.4rem;
+}
+
+.fab-btn__options .fab-btn__option-3 {
+  left: 4.8rem;
+  bottom: 7.5rem;
+}
+
+.fab-btn__options .fab-btn__option-4 {
+  left: 0.5rem;
+  bottom: 3.4rem;
+}
+
+.fab-btn__options .fab-btn__option-5 {
+  left: -2rem;
+  bottom: -1.5rem;
+}
+
+.fab-btn__option--active {
+  background-color: $icons-color-tap;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}

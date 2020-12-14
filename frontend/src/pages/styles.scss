@@ -51,13 +51,6 @@ form {
   height: 100%;
 }
 
-.container-body {
-  height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-}
-
 .btn {
   border-width: 0;
   outline: none;
@@ -67,19 +60,6 @@ form {
 .btn-grp {
   padding: 0;
   list-style: none;
-}
-
-.container-body__btn {
-  @include btn-shadow-fn;
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  bottom: 100px;
-  right: 25px;
-  padding: 0;
-  align-self: flex-end;
-  background-color: transparent;
-  border-radius: 50%;
 }
 
 .hr-item {

@@ -22,9 +22,17 @@ export class CommonEvents {
   )[0].children;
 
   private controllerBtn = document.getElementById('controllerBtn');
+  private controllerContainer = document.getElementsByClassName(
+    'controller-container'
+  )[0];
   private mapBtn = document.getElementById('mapBtn');
+  private mapContainer = document.getElementsByClassName('map-container')[0];
   private chatBtn = document.getElementById('chatBtn');
+  private chatContainer = document.getElementsByClassName('chat-container')[0];
   private videoBtn = document.getElementById('videoBtn');
+  private videoContainer = document.getElementsByClassName(
+    'video-container'
+  )[0];
 
   private backdropEventTarget: EventTarget | null = null;
   private sidebarBtnsEventTarget: {
@@ -137,6 +145,10 @@ export class CommonEvents {
   private tabBtnsEvents() {
     const activeClassRemover = {
       controllerBtn: () => {
+        this.mapContainer?.classList.remove('map--active');
+        this.chatContainer?.classList.remove('chat--active');
+        this.videoContainer?.classList.remove('video--active');
+
         this.mapBtn?.classList.remove('container-tabs__btn--active');
         this.mapBtn?.children[0].children[0].children[0].classList.remove(
           'container-tabs__btn__svg--active'
@@ -151,6 +163,10 @@ export class CommonEvents {
         );
       },
       mapBtn: () => {
+        this.controllerContainer?.classList.remove('controller--active');
+        this.chatContainer?.classList.remove('chat--active');
+        this.videoContainer?.classList.remove('video--active');
+
         this.controllerBtn?.classList.remove('container-tabs__btn--active');
         this.controllerBtn?.children[0].children[0].classList.remove(
           'container-tabs__btn__svg--active'
@@ -165,6 +181,10 @@ export class CommonEvents {
         );
       },
       chatBtn: () => {
+        this.controllerContainer?.classList.remove('controller--active');
+        this.mapContainer?.classList.remove('map--active');
+        this.videoContainer?.classList.remove('video--active');
+
         this.controllerBtn?.classList.remove('container-tabs__btn--active');
         this.controllerBtn?.children[0].children[0].classList.remove(
           'container-tabs__btn__svg--active'
@@ -179,6 +199,10 @@ export class CommonEvents {
         );
       },
       videoBtn: () => {
+        this.controllerContainer?.classList.remove('controller--active');
+        this.mapContainer?.classList.remove('map--active');
+        this.chatContainer?.classList.remove('chat--active');
+
         this.controllerBtn?.classList.remove('container-tabs__btn--active');
         this.controllerBtn?.children[0].children[0].classList.remove(
           'container-tabs__btn__svg--active'
@@ -196,8 +220,11 @@ export class CommonEvents {
 
     setTimeout(() => {
       this.controllerBtn?.click();
+      this.controllerContainer?.classList.add('controller--active');
     }, 1);
     this.controllerBtn?.addEventListener('click', () => {
+      this.controllerContainer?.classList.add('controller--active');
+
       this.controllerBtn?.classList.add('container-tabs__btn--active');
       this.controllerBtn?.children[0].children[0].classList.add(
         'container-tabs__btn__svg--active'
@@ -206,6 +233,8 @@ export class CommonEvents {
     });
 
     this.mapBtn?.addEventListener('click', () => {
+      this.mapContainer?.classList.add('map--active');
+
       this.mapBtn?.classList.add('container-tabs__btn--active');
       this.mapBtn?.children[0].children[0].children[0].classList.add(
         'container-tabs__btn__svg--active'
@@ -214,6 +243,8 @@ export class CommonEvents {
     });
 
     this.chatBtn?.addEventListener('click', () => {
+      this.chatContainer?.classList.add('chat--active');
+
       this.chatBtn?.classList.add('container-tabs__btn--active');
       this.chatBtn?.children[0].children[0].classList.add(
         'container-tabs__btn__svg--active'
@@ -222,6 +253,8 @@ export class CommonEvents {
     });
 
     this.videoBtn?.addEventListener('click', () => {
+      this.videoContainer?.classList.remove('video--active');
+
       this.videoBtn?.classList.add('container-tabs__btn--active');
       this.videoBtn?.children[0].children[0].classList.add(
         'container-tabs__btn__svg--active'

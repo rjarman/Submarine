@@ -1,0 +1,37 @@
+@import '../../variables.scss';
+
+.video-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.container-body__display-meter {
+  width: 170px;
+  position: absolute;
+  right: 35px;
+  top: 30px;
+  font-family: $submarine-caption;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: right;
+  color: $display-meter-color;
+}
+
+.container-body__display-meter > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.container-body__display-meter em {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.video-container > video {
+  height: 100%;
+}

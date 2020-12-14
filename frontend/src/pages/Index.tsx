@@ -5,6 +5,7 @@ import { Backdrop } from './components/Backdrop';
 import { Sidebar } from './components/Sidebar';
 import { IndexEvent } from './libs/typings/Typings';
 import { About } from './components/About';
+import { Controller } from './components/controller/Controller';
 import { Tabs } from './components/Tabs';
 
 class Index extends React.Component {
@@ -18,6 +19,7 @@ class Index extends React.Component {
         <Backdrop />
         <Sidebar />
         <About />
+        <Controller />
         <Tabs />
       </>
     );

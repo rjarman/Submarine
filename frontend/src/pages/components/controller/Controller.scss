@@ -1,0 +1,10 @@
+.controller-container {
+  height: 100%;
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.controller--active {
+  display: flex;
+}
