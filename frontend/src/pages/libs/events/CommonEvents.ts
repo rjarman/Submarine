@@ -34,6 +34,10 @@ export class CommonEvents {
     'video-container'
   )[0];
 
+  private fabBtn = document.getElementById('fabBtn');
+  private fabCheckbox = document.getElementById('fabCheckbox');
+  private isFabClicked = false;
+
   private backdropEventTarget: EventTarget | null = null;
   private sidebarBtnsEventTarget: {
     element: Element | null;
@@ -52,6 +56,7 @@ export class CommonEvents {
     this.sidebarBtnEvents();
     this.socialBtnEvents();
     this.aboutPopoverEvents();
+    this.fabBtnEvents();
     this.tabBtnsEvents();
     this.dispatchEvents();
   }
@@ -67,6 +72,10 @@ export class CommonEvents {
     this.menuBtn?.addEventListener('click', (event: Event) => {
       this.backdrop?.classList.add('backdrop--active');
       this.sidebar.classList.add('sidebar--active');
+      if (this.isFabClicked) {
+        this.fabCheckbox?.click();
+        this.isFabClicked = false;
+      }
     });
     for (const btn in this.sidebarBtns) {
       if (Object.prototype.hasOwnProperty.call(this.sidebarBtns, btn)) {
@@ -140,6 +149,12 @@ export class CommonEvents {
         window.open(linksParser[i]);
       });
     }
+  }
+
+  private fabBtnEvents() {
+    this.fabBtn?.addEventListener('click', () => {
+      this.isFabClicked = true;
+    });
   }
 
   private tabBtnsEvents() {
@@ -223,6 +238,10 @@ export class CommonEvents {
       this.controllerContainer?.classList.add('controller--active');
     }, 1);
     this.controllerBtn?.addEventListener('click', () => {
+      if (this.isFabClicked) {
+        this.fabCheckbox?.click();
+        this.isFabClicked = false;
+      }
       this.controllerContainer?.classList.add('controller--active');
 
       this.controllerBtn?.classList.add('container-tabs__btn--active');
@@ -233,6 +252,10 @@ export class CommonEvents {
     });
 
     this.mapBtn?.addEventListener('click', () => {
+      if (this.isFabClicked) {
+        this.fabCheckbox?.click();
+        this.isFabClicked = false;
+      }
       this.mapContainer?.classList.add('map--active');
 
       this.mapBtn?.classList.add('container-tabs__btn--active');
@@ -243,6 +266,10 @@ export class CommonEvents {
     });
 
     this.chatBtn?.addEventListener('click', () => {
+      if (this.isFabClicked) {
+        this.fabCheckbox?.click();
+        this.isFabClicked = false;
+      }
       this.chatContainer?.classList.add('chat--active');
 
       this.chatBtn?.classList.add('container-tabs__btn--active');
@@ -253,6 +280,10 @@ export class CommonEvents {
     });
 
     this.videoBtn?.addEventListener('click', () => {
+      if (this.isFabClicked) {
+        this.fabCheckbox?.click();
+        this.isFabClicked = false;
+      }
       this.videoContainer?.classList.remove('video--active');
 
       this.videoBtn?.classList.add('container-tabs__btn--active');

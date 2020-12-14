@@ -14,7 +14,7 @@ export class Fab extends React.Component {
     return (
       <div className="fab-container">
         <input id="fabCheckbox" type="checkbox" className="fab-checkbox" />
-        <label className="fab-btn" htmlFor="fabCheckbox">
+        <label className="fab-btn" htmlFor="fabCheckbox" id="fabBtn">
           <span className="fab-btn__dots fab-btn__dot-1"></span>
           <span className="fab-btn__dots fab-btn__dot-2"></span>
           <span className="fab-btn__dots fab-btn__dot-3"></span>
