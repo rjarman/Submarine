@@ -63,7 +63,6 @@ export class CommonEvents {
 
   private backdropEvents() {
     this.backdrop?.addEventListener('click', (event: Event) => {
-      console.log('ok');
       this.backdropEventTarget = event.target;
     });
   }
