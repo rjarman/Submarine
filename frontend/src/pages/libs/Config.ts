@@ -12,3 +12,10 @@ export const links = {
     twitter: 'https://twitter.com/_rjarman',
   },
 };
+
+export const app = {
+  coordinate: {
+    latitude: 22.9659,
+    longitude: 89.8173,
+  },
+};

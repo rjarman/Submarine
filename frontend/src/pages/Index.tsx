@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom';
 import './styles.scss';
 import { Backdrop } from './components/Backdrop';
 import { Sidebar } from './components/Sidebar';
-import { IndexEvent } from './libs/typings/Typings';
+import { IndexEvent, Service } from './libs/typings/Typings';
 import { About } from './components/About';
 import { Controller } from './components/controller/Controller';
+import { Map } from './components/map/Map';
 import { Tabs } from './components/Tabs';
 
 class Index extends React.Component {
+  private service: Service;
+
+  constructor(props: {}) {
+    super(props);
+    this.service = new Service();
+  }
+
   componentDidMount() {
     new IndexEvent();
   }
@@ -20,6 +28,7 @@ class Index extends React.Component {
         <Sidebar />
         <About />
         <Controller />
+        <Map service={this.service} />
         <Tabs />
       </>
     );

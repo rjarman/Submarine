@@ -1,0 +1,30 @@
+@import '../../variables.scss';
+
+.map-container {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.map--active {
+  display: block;
+}
+
+.map-loading {
+  text-align: center;
+  font: 18px $submarine-caption, Arial, sans-serif;
+}
+
+.map-loading--deactivate {
+  display: none;
+}
+
+.google-map {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.google-map--active {
+  display: block;
+}
