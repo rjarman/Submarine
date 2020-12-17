@@ -44,7 +44,7 @@ const config = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(mp4|png|jpg|svg|jpeg|woff2|woff|ttf)$/,
+        test: /\.(mp4|png|jpg|svg|jpeg|gif|woff2|woff|ttf)$/,
         use: [
           {
             loader: 'file-loader',
