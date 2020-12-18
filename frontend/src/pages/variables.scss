@@ -21,9 +21,14 @@ $container-tab-bg-color: white;
 $display-meter-color: white;
 $fab-icon-color: white;
 $info-window-bg-color: white;
+$chat-send-bg-color: #4895ef;
+$chat-send-text-color: white;
+$reply-dot-color:  #303131;
+$reply-tag-dot-color: #cecece;
+$reply-tag-color: cornflowerblue;
 
 $common-font-size: 0.9375rem;
 
-@mixin btn-shadow-fn {
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+@mixin btn-shadow-fn($color) {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, $color);
 }

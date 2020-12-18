@@ -276,6 +276,7 @@ export class CommonEvents {
         'container-tabs__btn__svg--active'
       );
       activeClassRemover.chatBtn();
+      document.getElementsByClassName('scroll-to-last')[0].scrollIntoView();
     });
 
     this.videoBtn?.addEventListener('click', () => {

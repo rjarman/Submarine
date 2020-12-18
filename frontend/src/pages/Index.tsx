@@ -8,6 +8,7 @@ import { About } from './components/About';
 import { Controller } from './components/controller/Controller';
 import { Map } from './components/map/Map';
 import { Tabs } from './components/Tabs';
+import { Chat } from './components/chat/Chat';
 
 class Index extends React.Component {
   private service: Service;
@@ -29,6 +30,7 @@ class Index extends React.Component {
         <About />
         <Controller />
         <Map service={this.service} />
+        <Chat service={this.service} />
         <Tabs />
       </>
     );

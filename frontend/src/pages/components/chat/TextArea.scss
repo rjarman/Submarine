@@ -1,0 +1,109 @@
+@import '../../variables.scss';
+
+.textarea-container {
+  position: fixed;
+  //   right: 35px;
+  bottom: 85px;
+  //   height: 50px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.textarea-container__logo {
+  @include btn-shadow-fn(0.2);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: $chat-send-bg-color;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+  margin-right: 30px;
+}
+
+.textarea-container__logo > img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.textarea-checkbox {
+  display: none;
+}
+
+.textarea-btn__options {
+  position: absolute;
+  border: 1px solid transparent;
+  width: 100%;
+  height: 13rem;
+  transition: all 0.3s ease;
+  transform-origin: bottom right;
+  transform: scale(0);
+  bottom: 20px;
+  right: 50px;
+}
+
+.textarea-btn__options > span {
+  @include btn-shadow-fn(0.2);
+  position: absolute;
+  right: 50px;
+  bottom: -13.5px;
+  //   max-width: 285px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  overflow: auto;
+  max-height: 200px;
+  min-height: 35px;
+  padding: 10px;
+  word-break: break-all;
+  outline: none;
+  margin: auto;
+  width: 69%;
+}
+
+.textarea-checkbox:checked ~ .textarea-btn__options {
+  transform: scale(1);
+}
+
+.textarea-container__logo-send {
+  display: none;
+}
+
+.textarea-container__logo-send--active {
+  display: block;
+  margin-left: 5px;
+}
+
+.textarea-container__logo-msg--deactivate {
+  display: none;
+}
+
+@media (min-width: 400px) {
+  .textarea-btn__options > span {
+    width: 70%;
+  }
+}
+
+@media (max-width: 375px) {
+  .textarea-btn__options > span {
+    width: 68%;
+  }
+}
+
+@media (max-width: 375px) {
+  .textarea-btn__options > span {
+    width: 65%;
+  }
+}
+
+@media (max-width: 375px) {
+  .textarea-btn__options > span {
+    width: 64%;
+  }
+}

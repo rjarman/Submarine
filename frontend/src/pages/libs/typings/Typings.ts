@@ -5,6 +5,7 @@ import { IndexEvents } from '../events/IndexEvents';
 import { MapEvents } from '../events/MapEvents';
 import {} from 'googlemaps';
 import { Services } from '../Services';
+import { ChatEvents } from '../events/ChatEvents';
 
 export type IconComponent = Icons;
 export const IconComponent = Icons;
@@ -62,3 +63,5 @@ export interface DateOptions {
   month: string;
   day: string;
 }
+export type ChatEvent = ChatEvents;
+export const ChatEvent = ChatEvents;

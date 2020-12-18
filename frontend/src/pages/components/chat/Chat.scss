@@ -1,0 +1,117 @@
+@import '../../variables.scss';
+
+.chat-container {
+  display: none;
+  width: 100%;
+  height: calc(100% - 66px);
+  overflow: auto;
+}
+
+.chat--active {
+  display: block;
+}
+
+.chat-bubbles {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  padding: 20px;
+}
+
+.chat-bubble {
+  @include btn-shadow-fn(0.1);
+  max-width: 70%;
+  min-height: 30px;
+  min-width: 85px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-family: $submarine-caption;
+  padding: 7px;
+  word-break: break-all;
+  margin-bottom: 15px;
+}
+
+.chat-bubbles > div:last-child {
+  margin: 0;
+}
+
+.chat-bubble__send {
+  align-self: flex-end;
+  background-color: $chat-send-bg-color;
+  text-align: right;
+  color: $chat-send-text-color;
+}
+
+.chat-bubble__reply {
+  align-self: flex-start;
+  text-align: left;
+}
+
+.chat-reply__dot-container {
+  display: none;
+  position: relative;
+  margin-left: 25px;
+  bottom: 15px;
+}
+
+.chat-reply__dot-container--active {
+  display: block;
+}
+
+.chat-reply__dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background: $reply-dot-color;
+  animation: wave 1.3s linear infinite;
+
+  &:nth-child(2) {
+    animation-delay: -1.1s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: -0.9s;
+  }
+}
+
+.chat-bubble__dot {
+  margin: 0 5px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border: 1px solid $reply-tag-dot-color;
+  border-radius: 50%;
+}
+
+.chat-bubble__tag {
+  display: inline-block;
+  color: $reply-tag-color;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.chat-bubble__text {
+  font-size: 13px;
+}
+
+.chat-bubble__time {
+  font-size: 9px;
+  margin-top: 5px;
+}
+
+@keyframes wave {
+  0%,
+  60%,
+  100% {
+    transform: initial;
+  }
+
+  30% {
+    transform: translateY(-15px);
+  }
+}
