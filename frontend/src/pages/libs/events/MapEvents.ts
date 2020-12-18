@@ -78,7 +78,15 @@ export class MapEvents {
   private getGroundStationPosition(
     onSuccess: PositionCallback,
     onError: PositionErrorCallback = (error: GeolocationPositionError) => {
-      alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+      alert(
+        'Getting error while accessing phone location!\n\n' +
+          'code: ' +
+          error.code +
+          '\n' +
+          'message: ' +
+          error.message +
+          '\n'
+      );
     }
   ) {
     navigator.geolocation.getCurrentPosition(onSuccess, onError, {
