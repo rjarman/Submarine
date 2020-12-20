@@ -152,7 +152,7 @@ export class CommonEvents {
 
   private fabBtnEvents() {
     this.fabBtn?.addEventListener('click', () => {
-      this.isFabClicked = true;
+      this.isFabClicked = this.isFabClicked ? false : true;
     });
   }
 
