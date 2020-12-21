@@ -16,6 +16,10 @@
   background-color: $container-tab-bg-color;
 }
 
+.container-tabs--deactivate {
+  display: none;
+}
+
 .container-tabs__btn {
   display: flex;
   flex-flow: column nowrap;

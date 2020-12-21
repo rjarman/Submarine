@@ -284,7 +284,7 @@ export class CommonEvents {
         this.fabCheckbox?.click();
         this.isFabClicked = false;
       }
-      this.videoContainer?.classList.remove('video--active');
+      this.videoContainer?.classList.add('video--active');
 
       this.videoBtn?.classList.add('container-tabs__btn--active');
       this.videoBtn?.children[0].children[0].classList.add(

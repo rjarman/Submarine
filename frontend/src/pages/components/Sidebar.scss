@@ -9,6 +9,10 @@
   z-index: 30;
 }
 
+.btn-menu--deactivate {
+  display: none;
+}
+
 .sidebar {
   display: grid;
   grid-template-rows: 170px repeat(2, auto);
@@ -78,7 +82,7 @@
   margin: 0.3125rem 0;
   padding: 0 0.875rem;
   cursor: pointer;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
 }
 
 .sidebar__btn--clicked {

@@ -1,0 +1,83 @@
+@import '../../variables.scss';
+
+.model-container {
+  transform: scale(0);
+  transition: all 0.3s ease;
+  transform-origin: bottom center;
+  background-color: white;
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+}
+
+.model-container--active {
+  transform: scale(1);
+}
+
+.model-container__nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 20;
+}
+
+.model-container__nav > img {
+  width: 24px;
+  height: 24px;
+  margin: 25px 30px;
+  cursor: pointer;
+}
+
+.model-options {
+  position: absolute;
+  right: 45px;
+  top: 70px;
+  width: 110px;
+  height: 40px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: $submarine-caption;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  transform: scale(0);
+  transform-origin: top right;
+  z-index: 20;
+}
+
+.model-options--active {
+  transform: scale(1);
+}
+
+.model-options > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.model-options > ul li {
+  cursor: pointer;
+}
+
+.model-images {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  top: 75px;
+}
+
+.model-images > div {
+  width: 50vw;
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

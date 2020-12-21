@@ -6,6 +6,7 @@ import { MapEvents } from '../events/MapEvents';
 import {} from 'googlemaps';
 import { Services } from '../Services';
 import { ChatEvents } from '../events/ChatEvents';
+import { VideoEvents } from '../events/VideoEvents';
 
 export type IconComponent = Icons;
 export const IconComponent = Icons;
@@ -65,3 +66,5 @@ export interface DateOptions {
 }
 export type ChatEvent = ChatEvents;
 export const ChatEvent = ChatEvents;
+export type VideoEvent = VideoEvents;
+export const VideoEvent = VideoEvents;
