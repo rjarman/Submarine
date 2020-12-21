@@ -6,7 +6,7 @@ import * as video from '../../../assets/video/video.mp4';
 export class Video extends React.Component {
   render() {
     return (
-      <div className="video-container">
+      <div className="controller-video-container">
         <div className="container-body__display-meter">
           <div>
             <p>TOD:</p>

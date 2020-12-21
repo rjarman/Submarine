@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 
-.video-container {
+.controller-video-container {
   position: fixed;
   top: 0;
   right: 0;
@@ -32,6 +32,6 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
-.video-container > video {
+.controller-video-container > video {
   height: 100%;
 }
